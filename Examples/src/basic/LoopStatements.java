@@ -27,6 +27,17 @@ public class LoopStatements {
 			System.out.println("Y is "+y);
 		} while (y > 0);
 
+		
+		String[] names = {"Donald", "Daisy", "Dagobert", "Micky"};
+		
+		for (String name : names) {
+			System.out.println("Name: " + name);
+		}
+		
+		for (int i = 0; i < names.length; i++) {
+			System.out.println("Name("+i+"): " + names[i]);
+		}
+		
 	}
 
 }
