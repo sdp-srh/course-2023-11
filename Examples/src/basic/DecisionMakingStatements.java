@@ -8,9 +8,15 @@ public class DecisionMakingStatements {
 		int y = 10;
 		int z = 20;
 		
+		String universityName = "SRH Heidelberg";
+		
 		// simple if
 		if (x > 10) {
 			System.out.println("x has more than one digit");
+		}
+		
+		if (universityName.startsWith("SRH")) {
+			System.out.println("University is part of SRH Group");
 		}
 		
 		// if else
