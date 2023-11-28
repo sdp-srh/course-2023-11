@@ -3,6 +3,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.UUID;
 
 
@@ -40,7 +41,7 @@ public class JobCRUDOperations {
 	// C: create operation
 	public static void createJobs() {
 		for (int i=0; i<3; i++) {
-			UUID uuid = UUID. randomUUID();
+			UUID uuid = UUID.randomUUID();
 			String id = uuid.toString();
 			String name = "Job "+i;
 			String description = "Job Description "+i;
@@ -60,8 +61,9 @@ public class JobCRUDOperations {
 	}
 	
 	// R: read operation
-	public static void readJobs() {
+	public static ArrayList<Job> readJobs() {
 		// reads and prints the jobs
+		ArrayList<Job> results = new ArrayList<Job>();
 		try {
 			Statement stmt = getConnection().createStatement();
 			String sql = "SELECT * FROM \"Job\"";
@@ -71,13 +73,16 @@ public class JobCRUDOperations {
 	            String jobName  = rs.getString("name");
 	            String jobDescription  = rs.getString("description");
 	            System.out.println(jobId+", "+jobName+", "+jobDescription);
+	            Job job = new Job(jobId, jobName, jobDescription);
+	            results.add(job);
 	         }	
 	        rs.close();
 			stmt.close();
 		} catch (SQLException e) {
 			System.out.println("An Error occured during READ");
 			e.printStackTrace();
-		}		
+		}
+		return results;
 	}
 	
 	// U: update operation
@@ -112,18 +117,27 @@ public class JobCRUDOperations {
 		}			
 	}
 	
+	public static void printListInformation(ArrayList<Job> jobs) {
+		System.out.println("The database contains : "+jobs.size());
+		Job job10 = jobs.get(10);
+		System.out.println("Job 10 name: "+job10.getName());
+	}
+	
 	public static void main(String args[]) {
+		ArrayList<Job> jobsInDB = readJobs();
+		printListInformation(jobsInDB);
+		/*
 		deleteJobs();
 		
 		// create some jobs
 		System.out.println("** Create the new job entries **");
 		createJobs();
-		
+	
 		// read and print the jobs
 		System.out.println("");
 		System.out.println("** Read jobs **");
 		readJobs();
-		
+	
 		
 		System.out.println("");
 		System.out.println("** Update description of Job 1 **");
@@ -131,20 +145,13 @@ public class JobCRUDOperations {
 		updateJobs();
 		
 		
-
+		
 		System.out.println("");
 		System.out.println("** Read jobs **");
 		// read and print the jobs
 		readJobs();
+		*/
 		
-		// delete the jobs
-		System.out.println("");
-		System.out.println("** Delete all jobs **");
-		deleteJobs();
 		
-		// read and print the jobs
-		System.out.println("");
-		System.out.println("** Read jobs **");
-		readJobs();
 	}
 }

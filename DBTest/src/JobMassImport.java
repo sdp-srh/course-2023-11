@@ -49,7 +49,7 @@ public class JobMassImport {
 		 for (String line: lines) {
 			 // now we need to split between name and description
 			 String[] values = line.split(";");
-			 insertJob(values[0], values[1]);
+			 insertJob("NEW"+ values[0], values[1]);
 		 }
 	}
 	
