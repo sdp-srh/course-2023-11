@@ -6,9 +6,7 @@ public abstract class Vehicle {
 	public void setProductionYear(int year) {
 		this.productionYear = year;
 	}
-	
 
-	
 	public int getProductionYear() {
 		return this.productionYear;
 	}

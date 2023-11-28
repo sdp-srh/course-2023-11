@@ -1,7 +1,6 @@
-package automotive;
+package carexample;
 
 public interface LoadingArea {
-	public int getCapacity();
 	public void setCapacity(int capacity);
-
+	public int getCapacity();
 }

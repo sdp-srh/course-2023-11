@@ -22,7 +22,7 @@ public class Car extends Vehicle {
 		this.seats = 0;
 		this.motor = new Motor();
 		this.speed = 0;
-		this.setProductionYear(2022);
+		this.setProductionYear(2023);
 	}
 	
 	
