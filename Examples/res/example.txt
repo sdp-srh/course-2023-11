@@ -1,0 +1,8 @@
+Welcome,
+
+this is a small example that shows how to read a text file with apache file utils.
+
+:)
+
+Bye
+
