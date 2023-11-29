@@ -26,6 +26,10 @@ public class ArraysExample {
         {
             System.out.println(strArr1[i]);
         }
+        
+        for (String s : strArr1) {
+        	System.out.println(s);
+        }
     }
 
 }
