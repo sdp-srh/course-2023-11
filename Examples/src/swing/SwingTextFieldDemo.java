@@ -15,6 +15,8 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 
 
 // see also: https://www.tutorialspoint.com/swingexamples
@@ -24,7 +26,14 @@ public class SwingTextFieldDemo implements PropertyChangeListener {
    private static JFormattedTextField rateTextField;
    private static JFormattedTextField yearsTextField;
    private static JFormattedTextField amountTextField;
-   public static void main(String[] args) {
+   public static void main(String[] args) throws Exception {
+		System.setProperty("sun.java2d.uiScale", "2.5");
+		for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+	        if ("Nimbus".equals(info.getName())) {
+	            UIManager.setLookAndFeel(info.getClassName());
+	            break;
+	        }
+		}
       SwingTextFieldDemo tester = new SwingTextFieldDemo();
       createWindow(tester);
    }

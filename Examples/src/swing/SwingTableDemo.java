@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 
 //see also: https://www.tutorialspoint.com/swingexamples
 public class SwingTableDemo {
@@ -21,7 +23,14 @@ public class SwingTableDemo {
    public SwingTableDemo(){
       prepareGUI();
    }
-   public static void main(String[] args){
+   public static void main(String[] args)throws Exception {
+		System.setProperty("sun.java2d.uiScale", "2.5");
+		for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+	        if ("Nimbus".equals(info.getName())) {
+	            UIManager.setLookAndFeel(info.getClassName());
+	            break;
+	        }
+		}
       SwingTableDemo swingControlDemo = new SwingTableDemo();      
       swingControlDemo.showTableDemo();
    }

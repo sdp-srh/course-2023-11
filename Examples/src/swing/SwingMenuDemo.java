@@ -18,6 +18,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JRadioButtonMenuItem;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 
 
 //see also: https://www.tutorialspoint.com/swingexamples
@@ -30,7 +32,15 @@ public class SwingMenuDemo {
    public SwingMenuDemo(){
       prepareGUI();
    }
-   public static void main(String[] args){
+   public static void main(String[] args)throws Exception {
+		System.setProperty("sun.java2d.uiScale", "2.5");
+		for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+	        if ("Nimbus".equals(info.getName())) {
+	            UIManager.setLookAndFeel(info.getClassName());
+	            break;
+	        }
+		}
+	    
       SwingMenuDemo  swingMenuDemo = new SwingMenuDemo();     
       swingMenuDemo.showMenuDemo();
    }

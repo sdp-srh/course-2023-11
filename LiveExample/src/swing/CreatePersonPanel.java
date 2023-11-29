@@ -1,4 +1,4 @@
-package application;
+package swing;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,8 +9,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import application.DBHandler;
-import application.Person;
+// import application.DBHandler;
+// import application.Person;
 
 /**
  * inherits from JPanel
@@ -56,7 +56,7 @@ public class CreatePersonPanel extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("ACTION IS TRIGGERED: "+e.getActionCommand());
+		/*
 		// saves the person data in case the person command is provided
 		if (SAVE_PERSON_COMMAND.equals(e.getActionCommand())) {
 			Person newPerson = new Person();
@@ -68,6 +68,7 @@ public class CreatePersonPanel extends JPanel implements ActionListener {
 			dbh.insertPerson(newPerson);
 			System.out.println("New Person created");
 		}
+		*/
 		
 	}
 	
