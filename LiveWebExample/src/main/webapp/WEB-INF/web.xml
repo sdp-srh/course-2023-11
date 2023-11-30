@@ -20,4 +20,15 @@
     <url-pattern>/HtmlTestServlet</url-pattern>
     <url-pattern>/hts</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MultiplyServlet</display-name>
+    <servlet-name>MultiplyServlet</servlet-name>
+    <servlet-class>test.MultiplyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MultiplyServlet</servlet-name>
+    <url-pattern>/MultiplyServlet</url-pattern>
+    <url-pattern>/multiply</url-pattern>
+  </servlet-mapping>
 </web-app>
