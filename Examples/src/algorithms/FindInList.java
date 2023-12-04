@@ -26,6 +26,7 @@ public class FindInList {
 		if (foundString != null) {
 			System.out.println("Found the value "+foundString);
 		}
+		
 	}
 	
 	public static boolean isValueInList(ArrayList<String> list, String value) {

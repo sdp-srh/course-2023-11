@@ -26,3 +26,32 @@ BlackJack
 hs_err_pid*
 replay_pid*
 /.metadata/
+Servers/.project
+Servers/.settings/org.eclipse.core.resources.prefs
+Servers/.settings/org.eclipse.wst.server.core.prefs
+Servers/Tomcat v10.1 Server at localhost-config/catalina.policy
+Servers/Tomcat v10.1 Server at localhost-config/catalina.properties
+Servers/Tomcat v10.1 Server at localhost-config/context.xml
+Servers/Tomcat v10.1 Server at localhost-config/server.xml
+Servers/Tomcat v10.1 Server at localhost-config/tomcat-users.xml
+Servers/Tomcat v10.1 Server at localhost-config/web.xml
+TestServlets/.classpath
+TestServlets/.project
+TestServlets/.settings/.jsdtscope
+TestServlets/.settings/org.eclipse.core.resources.prefs
+TestServlets/.settings/org.eclipse.jdt.core.prefs
+TestServlets/.settings/org.eclipse.wst.common.component
+TestServlets/.settings/org.eclipse.wst.common.project.facet.core.xml
+TestServlets/.settings/org.eclipse.wst.jsdt.ui.superType.container
+TestServlets/.settings/org.eclipse.wst.jsdt.ui.superType.name
+TestServlets/src/main/java/test/MyServlet.java
+TestServlets/src/main/webapp/index.html
+TestServlets/src/main/webapp/META-INF/MANIFEST.MF
+TestServlets/src/main/webapp/WEB-INF/web.xml
+WebExample/src/main/java/application/CreatePerson.java
+WebExample/src/main/java/application/ReadPersonsServlet.java
+WebProject/.project
+WebTechnologies/.project
+WebTechnologies/.settings/org.eclipse.wst.common.component
+WebExample/src/main/java/application/CreatePerson.java
+WebExample/src/main/java/application/ReadPersonsServlet.java

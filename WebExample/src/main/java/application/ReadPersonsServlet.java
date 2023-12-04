@@ -29,6 +29,8 @@ public class ReadPersonsServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// read all persons from the database
+		System.out.println(request.getRequestURI());
+		
 		DBHandler dbHandler = new DBHandler();
 		ArrayList<Person> persons = dbHandler.readPersons();
 		// create a simple html string
@@ -42,6 +44,7 @@ public class ReadPersonsServlet extends HttpServlet {
 		result += "</body>";
 		result += "</html>";
 		// send the response to the browser
+		response.setStatus(418);
 		response.getWriter().append(result);
 	}
 

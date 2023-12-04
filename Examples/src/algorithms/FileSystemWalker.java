@@ -4,16 +4,19 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class FileSystemWalker {
-
+	
+	// for ease of use the main function is in the calls
 	public static void main(String args[]) {
 		FileSystemWalker fsw = new FileSystemWalker();
-		fsw.readFolder(new File("C:\\srh\\sdp-2023-05\\script"));
+		fsw.readFolder(new File("C:\\srh\\github\\course-2023-11\\Examples\\src"));
 		fsw.printEntries();
 	}
 	
+	// a list of all found entries
 	ArrayList<String> entries = new ArrayList<String>();
 
 	public FileSystemWalker() {
+		// intializes the list
 		entries = new ArrayList<String>();
 	}
 	

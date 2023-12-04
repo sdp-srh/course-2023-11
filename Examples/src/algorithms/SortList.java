@@ -13,15 +13,12 @@ public class SortList {
 			System.out.println(s);
 		}
 		
-		/*
 		ArrayList<String> bubbleSortedList = bubbleSort(getPersonList());
 		System.out.println("");
 		System.out.println("Bubble Sort");
 		for (String s : bubbleSortedList) {
 			System.out.println(s);
 		}
-		*/
-		
 	}
 
 	public static ArrayList<String> bubbleSort(ArrayList<String> values) {

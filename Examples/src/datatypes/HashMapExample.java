@@ -10,6 +10,7 @@ public class HashMapExample {
 		map.put(3, "Orange");
 		map.put(500, "Banana");
 		map.put(501, "Kiwi");
+		map.put(1, "Melon");
 
 		System.out.println("Iterating Hashmap...");
 		for (Map.Entry m : map.entrySet()) {
