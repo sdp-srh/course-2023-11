@@ -8,8 +8,8 @@ public class SortExample {
 
 	public static void main(String args[]) {
 		// comparePersonsExample();
-		// sortPersonListExample();
-		sortPersonListWithComparatorExample();
+		sortPersonListExample();
+		//  sortPersonListWithComparatorExample();
 	}
 	
 	public static void comparePersonsExample() {
