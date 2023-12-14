@@ -1,8 +1,6 @@
 package exceptions;
 
-import java.io.FileNotFoundException;
-
-public class MyFileNotFoundException extends FileNotFoundException {
+public class MyFileNotFoundException extends Exception {
 
 	@Override
 	public String getMessage() {

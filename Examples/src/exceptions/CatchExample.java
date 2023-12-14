@@ -12,7 +12,7 @@ public class CatchExample {
 			System.out.println("Hello");
 		} catch (Exception e) {
 			System.out.println("Catch is only executed, if an exception has occured");
-			// e.printStackTrace();
+			e.printStackTrace();
 		}
 		finally {
 			System.out.println("Finally is always executed");
